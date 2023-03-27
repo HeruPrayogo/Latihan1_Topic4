@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_item"
+    app:startDestination="@id/halamanPertamaFragment">
+    <fragment
+        android:id="@+id/halamanPertamaFragment"
+        android:name="com.example.topic4.HalamanPertamaFragment"
+        android:label="fragment_halaman_pertama"
+        tools:layout="@layout/fragment_halaman_pertama" >
+        <action
+            android:id="@+id/action_halamanPertamaFragment_to_halamanKeduaFragment"
+            app:destination="@id/halamanKeduaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/halamanKeduaFragment"
+        android:name="com.example.topic4.HalamanKeduaFragment"
+        android:label="fragment_halamankedua"
+        tools:layout="@layout/fragment_halamankedua" >
+        <action
+            android:id="@+id/action_halamanKeduaFragment_to_halamanKetigaFragment"
+            app:destination="@id/halamanKetigaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/halamanKetigaFragment"
+        android:name="com.example.topic4.HalamanKetigaFragment"
+        android:label="fragment_halaman_ketiga"
+        tools:layout="@layout/fragment_halaman_ketiga" >
+        <argument
+            android:name="nama"
+            app:argType="string"
+            android:defaultValue="nama" />
+    </fragment>
+</navigation>
